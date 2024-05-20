@@ -6,6 +6,7 @@
 :set smarttab
 :set softtabstop=4
 :set mouse=a
+:set colorcolumn=110
 
 iabbrev #i #include
 iabbrev #d #define
@@ -18,28 +19,31 @@ Plug 'tpope/vim-commentary' " 'gcc' to comment out a line, 'gc' to comment out t
 Plug 'jiangmiao/auto-pairs' " use g:auto_pairs variable below to add a pair
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline' " Check the repo to properly configure the plugin
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'preservim/tagbar', {'on': 'TagbarToggle'} " Toggle with F8
 Plug 'dkarter/bullets.vim'
 Plug 'mbbill/undotree'
 Plug 'mg979/vim-visual-multi' " Add a cursor with Ctrl-n. Check the repo for more info
-Plug 'Ultra-Code/awesome-neovim' " Check the repo to properly configure the plugin
+" Plug 'Ultra-Code/awesome-neovim' " Check the repo to properly configure the plugin
 
 " C++ plugins
 Plug 'Shougo/deoplete.nvim'
-Plug 'zchee/deoplete-clang'
+Plug 'Shougo/neoinclude.vim'
+Plug 'Shougo/deoplete-clangx'
+" Plug 'zchee/deoplete-clang'
 
 " Zig plugins
-Plug 'ziglang/zig.vim'
+" Plug 'ziglang/zig.vim'
 
+" LSP plugins
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 " For vsnip users.
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
@@ -77,6 +81,12 @@ let g:deoplete#sources#clang#clang_header = 'C:\Program Files\LLVM\lib\clang'
 let g:deoplete#sources#clang#flags = ['--target=x86_64-w64-mingw32']
 let g:deoplete#sources#clang#sort_algo = 'priority'
 let g:deoplete#sources#clang#std = {'c': 'c11', 'cpp': 'c++20', 'objc': 'c11', 'objcpp': 'c++1z'}
+let g:clang_complete_macros = 1
+
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+set completeopt-=preview
+
+let g:zig_fmt_autosave = 0
 
 nnoremap <F5> :set invrelativenumber<CR>
 
@@ -401,4 +411,14 @@ require("dressing").setup({
     get_config = nil,
   },
 })
+EOF
+
+lua << EOF
+
+require'cmp'.setup {
+  sources = {
+    { name = 'nvim_lsp_signature_help' }
+  }
+}
+
 EOF
