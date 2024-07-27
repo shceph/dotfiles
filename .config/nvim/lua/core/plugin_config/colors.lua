@@ -52,17 +52,17 @@ require('rose-pine').setup({
         -- VertSplit = { fg = "muted", bg = "muted" },
     },
 
-    before_highlight = function(group, highlight, palette)
-        -- Disable all undercurls
-        -- if highlight.undercurl then
-        --     highlight.undercurl = false
-        -- end
-        --
-        -- Change palette colour
-        -- if highlight.fg == palette.pine then
-        --     highlight.fg = palette.foam
-        -- end
-    end,
+    --before_highlight = function(group, highlight, palette)
+    --    -- Disable all undercurls
+    --    -- if highlight.undercurl then
+    --    --     highlight.undercurl = false
+    --    -- end
+    --    --
+    --    -- Change palette colour
+    --    -- if highlight.fg == palette.pine then
+    --    --     highlight.fg = palette.foam
+    --    -- end
+    --end,
 })
 
 -- vim.cmd("colorscheme rose-pine")
@@ -78,10 +78,10 @@ vim.cmd("colorscheme rose-pine-moon")
 
 -- vim.cmd("colorscheme gruvbox")
 
-local function set_highlights()
-    vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-    vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
-    vim.api.nvim_set_hl(0, "NonText", { bg = "NONE" })
-end
+-- local function set_highlights()
+--     vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+--     vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
+--     vim.api.nvim_set_hl(0, "NonText", { bg = "NONE" })
+-- end
 
 -- set_highlights()
