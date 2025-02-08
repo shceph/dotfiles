@@ -7,6 +7,7 @@ vim.opt.smarttab = true
 vim.opt.softtabstop = 4
 vim.opt.mouse = 'a'
 vim.opt.colorcolumn = '80'
+vim.opt.wrap = false;
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
