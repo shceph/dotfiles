@@ -2,6 +2,11 @@
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
 lspconfig.ts_ls.setup {}
+lspconfig.html.setup {}
+lspconfig.cssls.setup {}
+lspconfig.emmet_ls.setup({
+	filetypes = { 'html', 'css' }, -- Enable Emmet for HTML and CSS
+})
 lspconfig.hls.setup({
 	cmd = { 'haskell-language-server-wrapper', '--lsp' },
 	settings = {
