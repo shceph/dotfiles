@@ -2,11 +2,22 @@
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
 lspconfig.ts_ls.setup {}
-lspconfig.html.setup {}
-lspconfig.cssls.setup {}
+
+local html_capabilities = vim.lsp.protocol.make_client_capabilities()
+html_capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.glsl_analyzer.setup {}
+
+lspconfig.html.setup {
+	capabilities = html_capabilities,
+}
+lspconfig.cssls.setup {
+	capabilities = html_capabilities,
+}
 lspconfig.emmet_ls.setup({
 	filetypes = { 'html', 'css' }, -- Enable Emmet for HTML and CSS
 })
+
 lspconfig.hls.setup({
 	cmd = { 'haskell-language-server-wrapper', '--lsp' },
 	settings = {

@@ -17,3 +17,10 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 
 vim.opt.encoding = 'UTF-8'
+
+vim.filetype.add({
+	extension = {
+		vert = "glsl",
+		frag = "glsl",
+	}
+})
