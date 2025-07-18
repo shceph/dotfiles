@@ -1,7 +1,7 @@
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-
 vim.cmd([[iabbrev #i #include]])
 vim.cmd([[iabbrev #d #define]])
+
+vim.g.mapleader = " "
 
 vim.api.nvim_set_keymap('n', '<leader>o', 'o<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>O', 'O<Esc>', { noremap = true })
