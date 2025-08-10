@@ -115,7 +115,8 @@
     "tooltip-format": "Current memory usage: {used:0.2f}G/{total:0.2f}G"
   },
   "cpu": {
-    "format": "<span color='#FF9F0A'>  </span>{icon0}{icon1}{icon2}{icon3}{usage:>2}% ",
+    "format": "<span color='#FF9F0A'>  </span>{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{usage:>2}% ",
+	"format-alt": "<span color='#FF9F0A'>  </span>{usage}% ",
     "tooltip": true,
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
   },
@@ -143,6 +144,7 @@
     ]
   },
   "bluetooth": {
+    "format-disabled": "",
     "format": "<span color='#00BFFF'>  </span>{status} ",
     "format-connected": "<span color='#00BFFF'>  </span>{device_alias} ",
     "format-connected-battery": "<span color='#00BFFF'>  </span>{device_alias}{device_battery_percentage}% ",

@@ -13,3 +13,4 @@ PS1='[\u@\h \W]\$ '
 
 export GTK_THEME=Adwaita:dark
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/opt/cross/bin:$PATH"

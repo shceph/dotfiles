@@ -6,20 +6,20 @@ return {
 		'rose-pine/neovim',
 		config = function()
 			require('rose-pine').setup({
-				variant = "auto",   -- auto, main, moon, or dawn
+				variant = "auto", -- auto, main, moon, or dawn
 				dark_variant = "moon", -- main, moon, or dawn
 				dim_inactive_windows = false,
-				extend_background_behind_borders = true,
+				extend_background_behind_borders = false,
 
 				enable = {
 					terminal = true,
 					legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-					migrations = true,  -- Handle deprecated options automatically
+					migrations = true, -- Handle deprecated options automatically
 				},
 
 				styles = {
 					bold = true,
-					italic = false,
+					italic = true,
 					transparency = true,
 				},
 
@@ -56,20 +56,28 @@ return {
 
 				highlight_groups = {
 					-- Comment = { fg = "foam" },
+					StatusLine    = { fg = "love", bg = "surface", blend = 15 },
 					-- VertSplit = { fg = "muted", bg = "muted" },
+					-- Visual         = { fg = "base", bg = "text", inherit = false },
+
+					-- Completion menu window (nvim-cmp)
+					Pmenu         = { bg = "surface", fg = "text" },
+					PmenuMatch    = { bg = "surface", fg = "text" },
+					PmenuKind     = { bg = "surface", fg = "text" },
+					PmenuMatchSel = { bg = "surface", fg = "text" },
 				},
 
-				--before_highlight = function(group, highlight, palette)
-				--    -- Disable all undercurls
-				--    -- if highlight.undercurl then
-				--    --     highlight.undercurl = false
-				--    -- end
-				--    --
-				--    -- Change palette colour
-				--    -- if highlight.fg == palette.pine then
-				--    --     highlight.fg = palette.foam
-				--    -- end
-				--end,
+				-- before_highlight = function(group, highlight, palette)
+				--     -- Disable all undercurls
+				--     if highlight.undercurl then
+				--         highlight.undercurl = false
+				--     end
+				--     --
+				--     -- Change palette colour
+				--     if highlight.fg == palette.pine then
+				--         highlight.fg = palette.foam
+				--     end
+				-- end,
 			})
 
 			-- vim.cmd("colorscheme rose-pine")
@@ -95,4 +103,3 @@ return {
 		end
 	}
 }
-
