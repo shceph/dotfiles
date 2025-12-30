@@ -6,6 +6,8 @@ vim.g.mapleader = " "
 vim.api.nvim_set_keymap('n', '<leader>o', 'o<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>O', 'O<Esc>', { noremap = true })
 
+vim.keymap.set('n', '<leader>ig', 'viwUyiwI#ifndef <Esc>o#define <Esc>po<Esc>o#endif // <Esc>p')
+
 -- Move up and keep cursor centered
 vim.api.nvim_set_keymap('n', '<Up>', 'kzz', { noremap = true, silent = true })
 -- Move down and keep cursor centered
@@ -19,6 +21,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-vim.keymap.set({"n", "v"}, "<leader>p", [["+p]])
+vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])

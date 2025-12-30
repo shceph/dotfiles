@@ -1,0 +1,96 @@
+/* @define-color window_bg_color rgba(0, 0, 0, 0.8); */
+@define-color window_bg_color rgba(30, 30, 46, 0.9);
+@define-color accent_bg_color rgba(255, 255, 255, 0.1);
+@define-color theme_fg_color #CDD6F4;
+@define-color item_textbox_color #dee7e6;
+
+* {
+  all: unset;
+  font-family: "CaskaydiaMono Nerd Font";
+  font-size: 18px;
+}
+
+.normal-icons {
+  padding-right: 10px;
+  -gtk-icon-size: 20px;
+}
+
+.large-icons {
+  padding-right: 10px;
+  -gtk-icon-size: 40px;
+}
+
+.box-wrapper {
+  background: @window_bg_color;
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input {
+  background: @accent_bg_color;
+  color: @theme_fg_color;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.calc .item-subtext {
+}
+
+.item-box {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.item-text-box {
+  color: @item_textbox_color;
+}
+
+.item-subtext {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.item-quick-activation {
+  background: alpha(@accent_bg_color, 0.25);
+  color: @item_textbox_color;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+child:selected .item-box {
+  background: @accent_bg_color;
+}
+
+.keybinds-wrapper {
+  border-top: 1px solid lighter(@window_bg_color);
+  font-size: 12px;
+  opacity: 0.5;
+  color: @theme_fg_color;
+}
+
+.keybind-bind {
+  /* color: lighter(@window_bg_color); */
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+.todo.done .item-text-box {
+  opacity: 0.25;
+}
+
+.todo.urgent {
+  font-size: 24px;
+}
+
+.todo.active {
+  font-weight: bold;
+}
+
+/* .scroll { */
+/* } */
+
+scrollbar {
+  opacity: 0;
+}

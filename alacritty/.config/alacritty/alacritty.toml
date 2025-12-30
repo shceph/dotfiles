@@ -1,0 +1,70 @@
+[env]
+TERM = "xterm-256color"
+# TERM = "alacritty"
+
+[window]
+opacity = 0.9
+
+[font]
+size = 14.0
+normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
+bold = { family = "CaskaydiaMono Nerd Font", style = "Bold" }
+italic = { family = "CaskaydiaMono Nerd Font", style = "Italic" }
+
+# normal = { family = "Fira Code", style = "Regular" }
+# bold = { family = "Fira Code", style = "Bold" }
+# italic = { family = "Fira Code", style = "Italic" }
+
+[colors.primary]
+background = '#1E1E2E'
+foreground = '#CDD6F4'
+
+[colors.cursor]
+cursor = '#F5E0DC'
+text = '#1E1E2E'
+
+[colors.selection]
+background = '#F5E0DC'
+text = '#1E1E2E'
+
+# [colors.normal]
+# black   = '#11111B'   # crust
+# red     = '#F38BA8'   # red
+# green   = '#A6E3A1'   # green
+# yellow  = '#F9E2AF'   # yellow
+# blue    = '#89B4FA'   # blue
+# magenta = '#CBA6F7'   # mauve (more vibrant than pink)
+# cyan    = '#94E2D5'   # teal
+# white   = '#BAC2DE'   # subtext0
+
+# [colors.bright]
+# black   = '#585B70'   # surface2
+# red     = '#F38BA8'   # red  
+# green   = '#A6E3A1'   # green
+# yellow  = '#F9E2AF'   # yellow
+# blue    = '#89B4FA'   # blue
+# magenta = '#CBA6F7'   # mauve
+# cyan    = '#94E2D5'   # teal
+# white   = '#A6ADC8'   # subtext1
+
+# Normal colors
+[colors.normal]
+black = '#484f58'
+red = '#ff7b72'
+green = '#3fb950'
+yellow = '#d29922'
+blue = '#58a6ff'
+magenta = '#bc8cff'
+cyan = '#39c5cf'
+white = '#b1bac4'
+
+# Bright colors
+[colors.bright]
+black = '#6e7681'
+red = '#ffa198'
+green = '#56d364'
+yellow = '#e3b341'
+blue = '#79c0ff'
+magenta = '#bc8cff'
+cyan = '#39c5cf'
+white = '#b1bac4'

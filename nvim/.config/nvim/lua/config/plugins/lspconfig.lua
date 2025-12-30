@@ -79,7 +79,7 @@ return {
 			}
 			lspconfig.clangd.setup {
 				capabilities = capabilities,
-				cmd = { "clangd", '--background-index', '--clang-tidy', }
+				cmd = { "clangd", '--background-index', '--clang-tidy', '--enable-config', }
 			}
 			lspconfig.zls.setup {}
 			lspconfig.rust_analyzer.setup {
@@ -133,7 +133,7 @@ return {
 					vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
 					vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
 					vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-					vim.keymap.set('n', '<space>f', function()
+					vim.keymap.set('n', '<space>fj', function()
 						vim.lsp.buf.format { async = true }
 					end, opts)
 				end,
@@ -257,5 +257,35 @@ return {
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp"
+	},
+	{
+		'nvimtools/none-ls.nvim',
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			local null_ls    = require("null-ls")
+			local helpers    = require("null-ls.helpers")
+			local methods    = require("null-ls.methods")
+			local FORMATTING = methods.internal.FORMATTING
+
+			local nasm_fmt   = helpers.make_builtin({
+				name = "nasm_fmt",
+				meta = { description = "NASM formatter" },
+				method = FORMATTING,
+				filetypes = { "asm", "nasm" },
+
+				generator_opts = {
+					command = "nasm-fmt",
+					args = { "$FILENAME" },
+					to_stdin = false,
+					to_temp_file = true,
+				},
+
+				factory = helpers.formatter_factory,
+			})
+
+			null_ls.setup({
+				sources = { nasm_fmt },
+			})
+		end
 	},
 }
