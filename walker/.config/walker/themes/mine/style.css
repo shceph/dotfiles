@@ -53,6 +53,7 @@
 }
 
 .item-quick-activation {
+  backdrop-filter: blur(10px);
   background: alpha(@accent_bg_color, 0.25);
   color: @item_textbox_color;
   border-radius: 5px;
