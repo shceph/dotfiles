@@ -2,53 +2,48 @@
 * {
   font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid", "Fira Code Light";
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   color: #dcdfe1;
 }
-
 /* Transparent Waybar background */
 #waybar {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   box-shadow: none;
 }
-
 /* Unified style for all modules */
 #workspaces,
 #window,
 #tray{
   /*background-color: rgba(29,31,46, 0.95);*/
   background-color: rgba(15,27,53,0.9);
-  padding: 4px 6px; /* Maintain internal padding */
-  margin-top: 6px; /* Increase external margin */
-  margin-left: 6px; /* Increase external margin */
-  margin-right: 6px; /* Increase external margin */
-  border-radius: 10px;
+  padding: 3px 5px; /* Maintain internal padding */
+  margin-top: 5px; /* Increase external margin */
+  margin-left: 5px; /* Increase external margin */
+  margin-right: 5px; /* Increase external margin */
+  border-radius: 8px;
   border-width: 0px;
 }
-
 #clock,
 #custom-power{
   background-color: rgba(15,27,53,0.9);
-  margin-top: 6px; /* Leave space from the top of the screen */
-  margin-right: 6px;
+  margin-top: 5px; /* Leave space from the top of the screen */
+  margin-right: 5px;
   /*margin-bottom: 4px;*/
-  padding: 4px 2px; /* Maintain internal padding */
-  border-radius: 0 10px 10px 0;
+  padding: 3px 2px; /* Maintain internal padding */
+  border-radius: 0 8px 8px 0;
   border-width: 0px;
 }
-
 #network,
 #custom-lock{
   background-color: rgba(15,27,53,0.9);
-  margin-top: 6px; /* Leave space from the top of the screen */
-  margin-left: 6px;
+  margin-top: 5px; /* Leave space from the top of the screen */
+  margin-left: 5px;
   /*margin-bottom: 4px;*/
-  padding: 4px 2px; /* Maintain internal padding */
-  border-radius: 10px 0 0 10px;
+  padding: 3px 2px; /* Maintain internal padding */
+  border-radius: 8px 0 0 8px;
   border-width: 0px;
 }
-
 #custom-reboot,
 #bluetooth,
 #battery,
@@ -58,18 +53,16 @@
 #memory,
 #cpu{
   background-color: rgba(15,27,53,0.9);
-  margin-top: 6px; /* Leave space from the top of the screen */
+  margin-top: 5px; /* Leave space from the top of the screen */
   /*margin-bottom: 4px;*/
-  padding: 4px 2px; /* Maintain internal padding */
+  padding: 3px 2px; /* Maintain internal padding */
   border-width: 0px;
 }
-
 #custpm-temperature.critical,
 #pulseaudio.muted {
   color: #FF0000;
   padding-top: 0;
 }
-
 /* Mouse hover becomes a bit brighter */
 #bluetooth:hover,
 #network:hover,
@@ -88,34 +81,37 @@
 #window:hover {
   background-color: rgba(70, 75, 90, 0.9);
 }
-
 /* Workspace activation state highlight */
 #workspaces button:hover{
   background-color: rgba(97, 175, 239, 0.2);
-  padding: 2px 8px;
+  padding: 2px 6px;
   margin: 0 2px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
-
 #workspaces button.active {
   background-color: #61afef; /* Blue highlight */
   color: #ffffff;
-  padding: 2px 8px;
+  padding: 2px 6px;
   margin: 0 2px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
-
 /* Inactive workspace button */
 #workspaces button {
   background: transparent;
   border: none;
   color: #888888;
-  padding: 2px 8px;
+  padding: 2px 6px;
   margin: 0 2px;
   font-weight: bold;
 }
-
 #window {
   font-weight: 500;
   font-style: italic;
+}
+
+#workspaces {
+  margin-left: 12px;
+}
+#clock {
+  margin-right: 12px;
 }
