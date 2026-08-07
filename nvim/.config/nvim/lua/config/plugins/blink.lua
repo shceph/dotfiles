@@ -40,4 +40,9 @@ return {
     -- See the fuzzy documentation for more information
     fuzzy = { implementation = "rust" }
   },
+  completion = {
+	menu = {
+	  auto_show = true;
+	}
+  }
 }

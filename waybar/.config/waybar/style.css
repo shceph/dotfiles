@@ -15,33 +15,33 @@
 #workspaces,
 #window,
 #tray{
-  /*background-color: rgba(29,31,46, 0.95);*/
-  background-color: rgba(15,27,53,0.9);
+  /*background-color: rgba(29,31,46, 0.8);*/
+  background-color: rgba(15,27,53,0.8);
   padding: 3px 5px; /* Maintain internal padding */
   margin-top: 5px; /* Increase external margin */
   margin-left: 5px; /* Increase external margin */
   margin-right: 5px; /* Increase external margin */
-  border-radius: 8px;
+  border-radius: 10px;
   border-width: 0px;
 }
 #clock,
 #custom-power{
-  background-color: rgba(15,27,53,0.9);
+  background-color: rgba(15,27,53,0.8);
   margin-top: 5px; /* Leave space from the top of the screen */
   margin-right: 5px;
   /*margin-bottom: 4px;*/
   padding: 3px 2px; /* Maintain internal padding */
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 10px 10px 0;
   border-width: 0px;
 }
 #network,
 #custom-lock{
-  background-color: rgba(15,27,53,0.9);
+  background-color: rgba(15,27,53,0.8);
   margin-top: 5px; /* Leave space from the top of the screen */
   margin-left: 5px;
   /*margin-bottom: 4px;*/
   padding: 3px 2px; /* Maintain internal padding */
-  border-radius: 8px 0 0 8px;
+  border-radius: 10px 0 0 10px;
   border-width: 0px;
 }
 #custom-reboot,
@@ -52,7 +52,7 @@
 #custom-temperature,
 #memory,
 #cpu{
-  background-color: rgba(15,27,53,0.9);
+  background-color: rgba(15,27,53,0.8);
   margin-top: 5px; /* Leave space from the top of the screen */
   /*margin-bottom: 4px;*/
   padding: 3px 2px; /* Maintain internal padding */
@@ -79,21 +79,21 @@
 #custom-power:hover,
 /*#workspaces:hover,*/
 #window:hover {
-  background-color: rgba(70, 75, 90, 0.9);
+  background-color: rgba(70, 75, 90, 0.8);
 }
 /* Workspace activation state highlight */
 #workspaces button:hover{
   background-color: rgba(97, 175, 239, 0.2);
   padding: 2px 6px;
   margin: 0 2px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 #workspaces button.active {
   background-color: #61afef; /* Blue highlight */
   color: #ffffff;
   padding: 2px 6px;
   margin: 0 2px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 /* Inactive workspace button */
 #workspaces button {
